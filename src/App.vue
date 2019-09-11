@@ -2,7 +2,7 @@
   <div id="app">
     <p>Address: {{ address }}</p>
     <p>Signature: {{ signature }}</p>
-    <button :disabled="!address" @click="signinMessage">Signin message</button>
+    <button :disabled="!address" @click="signMessage">Sign message</button>
   </div>
 </template>
 
@@ -35,7 +35,7 @@ export default {
         this.address = accounts[0];
       });
     },
-    signinMessage() {
+    signMessage() {
       const { personal } = window.web3;
 
       if (!this.address) {
